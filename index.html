@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Love Letter to You, Princess</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #ffcccb;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            padding: 30px;
+        }
+
+        /* Card Container */
+        .card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1000px;
+        }
+
+        /* Card */
+        .card {
+            width: 300px;
+            height: 400px;
+            background-color: #e60073;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.8s ease-in-out;
+            transform-origin: left;
+        }
+
+        /* When clicked, card flips open */
+        .card.open {
+            transform: rotateY(-150deg);
+        }
+
+        /* Heart Button */
+        .heart-button {
+            font-size: 100px;
+            color: white;
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .heart-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Hidden Love Letter */
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            margin: 20px auto;
+            text-align: left;
+            display: none;
+            opacity: 0;
+            transition: opacity 1s ease-in;
+        }
+
+        .container.show {
+            display: block;
+            opacity: 1;
+        }
+
+        h1 {
+            color: #e60073;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.8;
+        }
+    </style>
+    <script>
+        function showLetter() {
+            // Flip open the card
+            document.querySelector('.card').classList.add('open');
+
+            // Show the love letter after a delay
+            setTimeout(() => {
+                document.querySelector('.container').classList.add('show');
+            }, 800);
+        }
+    </script>
+</head>
+<body>
+    <h2>Happy Valentine's Day, Princess ❤️</h2>
+
+    <!-- Card Section -->
+    <div class="card-container">
+        <div class="card" onclick="showLetter()">
+            <button class="heart-button">❤️</button>
+        </div>
+    </div>
+
+    <!-- Love Letter Section -->
+    <div class="container">
+        <h1>To My Precious Princess ❤️</h1>
+        <p>My love,</p>
+        <p>From the moment we met, my world changed forever. It has been over two years of laughter, love, and challenges, and through it all, you have been my rock, my joy, my everything. No words can truly express how much you mean to me.</p>
+        <p>We've had our ups and downs, but through every storm, we found our way back to each other, stronger than before. I am beyond lucky to have someone as beautiful, loving, and supportive as you in my life. You are not just my love—you are my heart, my home, and my safe place.</p>
+        <p>My precious little princess, you are the most special person in my life. Every single day, I fall more in love with you—your kindness, your strength, your beauty. You are sexy, you are cute, and I am completely obsessed with you. I can't wait for our future together, to explore the world, to create endless memories, and most of all, to marry you.</p>
+        <p>You are my dream, my forever, my one and only. I love you with all my heart, now and always.</p>
+        <p>Forever yours,</p>
+        <p>Your Love ❤️</p>
+    </div>
+</body>
+</html>
+
+
+
